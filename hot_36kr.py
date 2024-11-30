@@ -63,7 +63,7 @@ def fetch_36kr():
             for item in hot_searches:
                 # 构建超链接文本和链接
                 link_text = item['templateMaterial']['widgetTitle']
-                link = f'https://m.36kr.com/p/{item['itemId']}'
+                link = f'https://m.36kr.com/p/{item["itemId"]}'
 
                 # 构建markdown格式的超链接
                 markdown_link = f'+ [{link_text}]({link})\n'
