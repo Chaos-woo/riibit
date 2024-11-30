@@ -33,14 +33,10 @@ def fetch_weibo():
         parent_file_path = f'./archives/{app}/{year}/{formatted_month}'
         # 确保目录存在
         if not os.path.exists(parent_file_path):
-            os.makedirs(parent_file_path)
+            os.makedirs(parent_file_path, exist_ok=True)
 
         current_date = datetime.datetime.now().strftime('%Y-%m-%d')
         file_path = f'./archives/{app}/{year}/{formatted_month}/{current_date}.md'
-
-        # 确保目录存在
-        # if not os.path.exists(file_path):
-        #     os.file(file_path)
 
         # 读取文件内容，检查是否已经存在
         if os.path.exists(file_path):
