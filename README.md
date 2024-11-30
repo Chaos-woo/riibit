@@ -1,4 +1,4 @@
-# hot_search_cr1bi
+# hot_search_cribi
 
 Idea from [hot_searches_for_apps](https://github.com/WShuai123/hot_searches_for_apps).
 
