@@ -51,7 +51,7 @@ def fetch_toutiao():
         for item in hot_searches:
             # 构建超链接文本和链接
             link_text = item['Title']
-            link = f'`https://api.toutiaoapi.com/feoffline/amos_land/new/html/main/index.html?topic_id={item["ClusterId"]}'
+            link = f'https://api.toutiaoapi.com/feoffline/amos_land/new/html/main/index.html?topic_id={item["ClusterId"]}'
 
             # 构建markdown格式的超链接
             markdown_link = f'+ [{link_text}]({link})\n'
