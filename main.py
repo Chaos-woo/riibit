@@ -19,6 +19,12 @@ from netease_news import fetch_netease_news
 from qq_news import fetch_qq_news
 from the_paper import fetch_the_paper
 from toutiao import fetch_toutiao
+from v2ex import fetch_v2ex
+from github_trending import fetch_github_trending
+from anquanke import fetch_anquanke
+from csdn import fetch_csdn
+from dongqiudi import fetch_dongqiudi
+from history_today import fetch_history_today
 
 def test_main():
     print('test_main')
@@ -45,6 +51,12 @@ def main():
     fetch_qq_news()
     fetch_the_paper()
     fetch_toutiao()
+    fetch_v2ex()
+    fetch_github_trending()
+    fetch_anquanke()
+    fetch_csdn()
+    fetch_dongqiudi()
+    fetch_history_today()
 
 
 if __name__ == '__main__':
