@@ -12,6 +12,13 @@ from sspai import fetch_sspai
 from tieba import fetch_tieba
 from m_51cto import fetch_51cto
 from douban_group import fetch_douban_group
+from douban_movie import fetch_douban_movie
+from hello_github import fetch_hello_github
+from it_home import fetch_it_home
+from netease_news import fetch_netease_news
+from qq_news import fetch_qq_news
+from the_paper import fetch_the_paper
+from toutiao import fetch_toutiao
 
 def test_main():
     print('test_main')
@@ -32,6 +39,13 @@ def main():
     fetch_tieba()
     fetch_51cto()
     fetch_douban_group()
+    fetch_douban_movie()
+    fetch_hello_github()
+    fetch_it_home()
+    fetch_qq_news()
+    fetch_the_paper()
+    fetch_toutiao()
+
 
 if __name__ == '__main__':
     main()
