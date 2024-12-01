@@ -1,3 +1,5 @@
+import datetime
+
 from weibo import fetch_weibo
 from hot_36kr import fetch_36kr
 from zhihu import fetch_zhihu
@@ -31,33 +33,43 @@ def test_main():
 
 
 def main():
-    fetch_weibo()
-    fetch_36kr()
-    fetch_zhihu()
-    fetch_zhihu_daily()
-    fetch_acfun()
-    fetch_baidu()
-    fetch_bilibili()
-    fetch_douyin()
-    fetch_juejin()
-    fetch_jianshu()
-    fetch_sspai()
-    fetch_tieba()
-    fetch_51cto()
-    fetch_douban_group()
-    fetch_douban_movie()
-    fetch_hello_github()
-    fetch_it_home()
-    fetch_qq_news()
-    fetch_the_paper()
-    fetch_toutiao()
-    fetch_v2ex()
-    fetch_github_trending()
-    fetch_anquanke()
-    fetch_csdn()
-    fetch_dongqiudi()
-    fetch_history_today()
+    try_do(fetch_weibo)
+    try_do(fetch_36kr)
+    try_do(fetch_zhihu)
+    try_do(fetch_zhihu_daily)
+    try_do(fetch_acfun)
+    try_do(fetch_baidu)
+    try_do(fetch_bilibili)
+    try_do(fetch_douyin)
+    try_do(fetch_juejin)
+    try_do(fetch_jianshu)
+    try_do(fetch_sspai)
+    try_do(fetch_tieba)
+    try_do(fetch_51cto)
+    try_do(fetch_douban_group)
+    try_do(fetch_douban_movie)
+    try_do(fetch_hello_github)
+    try_do(fetch_it_home)
+    try_do(fetch_qq_news)
+    try_do(fetch_the_paper)
+    try_do(fetch_toutiao)
+    try_do(fetch_v2ex)
+    try_do(fetch_github_trending)
+    try_do(fetch_anquanke)
+    try_do(fetch_csdn)
+    try_do(fetch_dongqiudi)
+    try_do(fetch_history_today)
 
+def try_do(f):
+    try:
+        print(f'try do {f.__name__} start {datetime.datetime.now(tz=datetime.timezone.utc)}')
+        # 尝试执行传入的函数
+        f()
+    except Exception as e:
+        # 处理异常，这里只是打印异常信息，可以根据需要进行其他操作
+        print(f"捕获到异常：{e}")
+    finally:
+        print(f'try do {f.__name__} end')
 
 if __name__ == '__main__':
     main()
