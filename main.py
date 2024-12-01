@@ -30,7 +30,7 @@ from history_today import fetch_history_today
 from hupu import fetch_hupu
 from m_3dm_game import fetch_3dm_game
 from youshewang import fetch_youshewang
-from woshipm import fetch_woshipm
+#from woshipm import fetch_woshipm
 
 def test_main():
     print('test_main')
