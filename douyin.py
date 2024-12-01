@@ -50,16 +50,23 @@ def fetch_douyin():
         else:
             existing_content = ''
 
+        # 本次内容去重
+        markdown_links = []
+        for item in hot_searches:
+            # 构建超链接文本和链接
+            link_text = item['word']
+            encoded_link = urllib.parse.quote(link_text)
+            link = f'https://www.douyin.com/hot/{item["sentence_id"]}'
+
+            # 构建markdown格式的超链接
+            markdown_link = f'+ [{link_text}]({link})\n'
+            if markdown_link not in markdown_links:
+                markdown_links.append(markdown_link)
+
         # 写入内容
         with open(file_path, 'a', encoding='utf-8') as file:
-            for item in hot_searches:
-                # 构建超链接文本和链接
-                link_text = item['word']
-                encoded_link = urllib.parse.quote(link_text)
-                link = f'https://www.douyin.com/hot/{item["sentence_id"]}'
-
-                # 构建markdown格式的超链接
-                markdown_link = f'+ [{link_text}]({link})\n'
+            for item in markdown_links:
+                markdown_link = item
 
                 # 检查内容是否已经存在
                 if markdown_link not in existing_content:
