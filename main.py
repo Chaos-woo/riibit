@@ -27,10 +27,14 @@ from anquanke import fetch_anquanke
 from csdn import fetch_csdn
 from dongqiudi import fetch_dongqiudi
 from history_today import fetch_history_today
+from hupu import fetch_hupu
+from m_3dm_game import fetch_3dm_game
+from youshewang import fetch_youshewang
+from woshipm import fetch_woshipm
 
 def test_main():
     print('test_main')
-
+    # fetch_woshipm()
 
 def main():
     try_do(fetch_weibo)
@@ -59,6 +63,9 @@ def main():
     try_do(fetch_csdn)
     try_do(fetch_dongqiudi)
     try_do(fetch_history_today)
+    try_do(fetch_hupu)
+    try_do(fetch_3dm_game)
+    try_do(fetch_youshewang)
 
 def try_do(f):
     try:
