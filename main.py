@@ -31,9 +31,11 @@ from hupu import fetch_hupu
 from m_3dm_game import fetch_3dm_game
 from youshewang import fetch_youshewang
 from woshipm import fetch_woshipm
+from dongchedi import fetch_dongchedi
 
 def test_main():
     print('test_main')
+
 
 def main():
     try_do(fetch_weibo)
@@ -66,6 +68,7 @@ def main():
     try_do(fetch_3dm_game)
     try_do(fetch_youshewang)
     try_do(fetch_woshipm)
+    try_do(fetch_dongchedi)
 
 def try_do(f):
     try:
@@ -79,4 +82,4 @@ def try_do(f):
         print(f'try do {f.__name__} end')
 
 if __name__ == '__main__':
-    main()
+    test_main()
