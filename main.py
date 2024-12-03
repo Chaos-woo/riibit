@@ -30,11 +30,10 @@ from history_today import fetch_history_today
 from hupu import fetch_hupu
 from m_3dm_game import fetch_3dm_game
 from youshewang import fetch_youshewang
-#from woshipm import fetch_woshipm
+from woshipm import fetch_woshipm
 
 def test_main():
     print('test_main')
-    # fetch_woshipm()
 
 def main():
     try_do(fetch_weibo)
@@ -66,6 +65,7 @@ def main():
     try_do(fetch_hupu)
     try_do(fetch_3dm_game)
     try_do(fetch_youshewang)
+    try_do(fetch_woshipm)
 
 def try_do(f):
     try:
