@@ -86,4 +86,4 @@ def try_do(f):
         print(f'try do {f.__name__} end')
 
 if __name__ == '__main__':
-    test_main()
+    main()
