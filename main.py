@@ -34,6 +34,7 @@ from woshipm import fetch_woshipm
 from dongchedi import fetch_dongchedi
 from anquanmaibo import fetch_anquanmaibo
 from xueqiu import fetch_xueqiu
+from m_52pojie import fetch_52pojie
 
 def test_main():
     print('test_main')
@@ -73,6 +74,7 @@ def main():
     try_do(fetch_dongchedi)
     try_do(fetch_anquanmaibo)
     try_do(fetch_xueqiu)
+    try_do(fetch_52pojie)
 
 def try_do(f):
     try:
