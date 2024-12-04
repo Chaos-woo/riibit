@@ -173,10 +173,3 @@ def generate_random_public_ip():
     fourth_octet = str(random.randint(1, 254))
 
     return '.'.join([first_octet, second_octet, third_octet, fourth_octet])
-
-def get_numbers(url):
-    # 这个函数需要根据实际的getNumbers函数实现来提取URL中的数字
-    # 这里假设它提取URL中最后一个斜杠 '/' 后面的数字
-    import re
-    match = re.search(r'/(\d+)/', url)
-    return match.group(1) if match else None
