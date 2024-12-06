@@ -36,10 +36,10 @@ from anquanmaibo import fetch_anquanmaibo
 from xueqiu import fetch_xueqiu
 from m_52pojie import fetch_52pojie
 from jihewang import fetch_jihewang
+from kanxue import fetch_kanxue
 
 def test_main():
     print('test_main')
-    
 
 def main():
     try_do(fetch_weibo)
@@ -77,6 +77,7 @@ def main():
     try_do(fetch_xueqiu)
     try_do(fetch_52pojie)
     try_do(fetch_jihewang)
+    try_do(fetch_kanxue)
 
 def try_do(f):
     try:
