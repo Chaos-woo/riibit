@@ -52,7 +52,7 @@ def fetch_zhihu():
             # 构建超链接文本和链接
             link_text = item['target']['title']
             encoded_link = urllib.parse.quote(link_text)
-            link = f'https://www.zhihu.com/question/{item["id"]}'
+            link = f'https://www.zhihu.com/question/{item["target"]["id"]}'
 
             # 构建markdown格式的超链接
             markdown_link = f'+ [{link_text}]({link})\n'
