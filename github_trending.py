@@ -40,7 +40,12 @@ def fetch_github_trending():
             # 提取信息
             h2_a = item.find('h2', attrs={'class': 'h3 lh-condensed'}).find('a')
             url = h2_a.get('href') if h2_a else None
-            desc = item.find('p', attrs={'class': 'col-9 color-fg-muted my-1 pr-4'}).get_text(strip=True)
+            desc = url[1:] # 默认
+
+            real_desc = item.find('p', attrs={'class': 'col-9 color-fg-muted my-1 pr-4'})
+            if real_desc != None:
+                desc = real_desc.get_text(strip=True)
+
             title = f'{url[1:]} | {desc}'
 
             # 构建移动端URL
