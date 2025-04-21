@@ -52,7 +52,7 @@ def fetch_acfun():
             # 构建超链接文本和链接
             link_text = item['title']
             encoded_link = urllib.parse.quote(link_text)
-            link = f'https://m.acfun.cn/v/?ac=${item["dougaId"]}'
+            link = f'https://m.acfun.cn/v/?ac{item["dougaId"]}'
 
             # 构建markdown格式的超链接
             markdown_link = f'+ [{link_text}]({link})\n'
